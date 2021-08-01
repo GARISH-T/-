@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes Gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+@keyframes heartbeat{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+#heart {
+    display: inline-block;
+    margin: 150px auto auto 50%;
+    position: relative;
+    /* transition: 1s; */
+    animation: heartbeat 0.5s infinite alternate;
+}
+/* 用鼠标 */
+/* #heart:hover {
+    transform: scale(1.5);
+}   */
+.heart1 {
+    width: 160px;
+    height: 100px;
+    background-image: linear-gradient(-45deg,#ff00f2be,#ff0000,#ff9400,#d9ff00);
+    background-size: 400% 400%;
+    animation: Gradient 1.25s linear infinite backwards;
+    position: absolute;
+    transform: translate(-40px,-30px) rotate(45deg);
+    border-radius: 50px 0px 0px 50px;
+}
+.heart2 {
+    width: 100px;
+    height: 160px;
+    background-image: linear-gradient(to left top,#ff00f2be,#ff0000,#ff9400,#d9ff00);
+    background-size: 400% 400%;
+    animation: Gradient 1.25s linear infinite backwards;
+    position: absolute;
+    transform: translate(32px,-60px) rotate(45deg);
+    border-radius: 50px 50px 0px 0px;
+}
